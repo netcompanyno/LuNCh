@@ -30,6 +30,7 @@ public class Application {
             public void onChildAdded(DataSnapshot dataSnapshot, String prevChildName) {
                 final String postId = dataSnapshot.getKey();
                 final Person person = dataSnapshot.getValue(Person.class);
+                System.out.println(dataSnapshot.exists());
 
                 System.out.println("added person " + person.getShortName());
             }
