@@ -19,7 +19,7 @@ class FirebaseConfiguration {
     @Throws(IOException::class)
     fun firebaseDatabase(): FirebaseDatabase {
         val classLoader = Thread.currentThread().contextClassLoader
-        val serviceAccount = classLoader.getResourceAsStream("service-account.json")
+        val serviceAccount = classLoader.getResourceAsStream("config/service-account.json")
         val options = FirebaseOptions.Builder()
                 .setCredentials(GoogleCredentials.fromStream(serviceAccount))
                 .setDatabaseUrl(databaseUrl)
