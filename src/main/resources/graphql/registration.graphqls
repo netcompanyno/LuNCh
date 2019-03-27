@@ -1,0 +1,17 @@
+type LunchEvent {
+    uid: String
+    created: String
+}
+
+type LunchLog {
+    person: Person!
+    events: [LunchEvent!]!
+}
+
+type Query {
+    lunchLogs: [LunchLog!]!
+}
+
+type Mutation {
+    registerEvent(uid: String): LunchEvent
+}

@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: lunch-api
+
+server:
+  port: 8080
+
+graphql:
+  servlet:
+    mapping: /graphql
+    enabled: true
+    corsEnabled: true
+
+app:
+  databaseUrl: ${DATABASE_URL}
+
+---
+
+spring:
+  profiles: development
+
+  application:
+    name: lunch-dev-api

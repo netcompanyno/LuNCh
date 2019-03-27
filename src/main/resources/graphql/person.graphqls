@@ -1,0 +1,11 @@
+type Person {
+    shortName: String
+    fullName: String
+    imageUrl: String
+    isActive: Boolean
+    serialNumber: String
+}
+
+extend type Query {
+    persons: [Person!]!
+}
